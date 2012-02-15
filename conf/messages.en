@@ -1,0 +1,52 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+# application.langs=en,da
+
+main.event.title = Cognitive Biases and Effects You Should Know About
+main.event.legend= CybercomTech presents talk by Kevlin Henney
+main.event.author= by <a href="http://www.two-sdg.demon.co.uk/curbralan">Kevlin Henney</a>  - Kevlin is an independent consultant and trainer, based in the UK but consulting and training throughout Europe and further afield. The focus of his work is in programming, practice, process and patterns. <a href="http://www.two-sdg.demon.co.uk/curbralan">.. read more </a>
+main.event.abstract1 = In software development, developers, architects and managers often like to think of themselves as rational and clear thinking, not prone to the chaotic and contradictory thinking they see at home, in politics or in the world of business. Although it is possible to get further from the truth than this, it is not likely.
+main.event.abstract2 = Those involved in software development are just as human as people in other walks of life, and are just as subject to the cognitive biases and effects that skew, truncate and bypass clear thinking.
+main.event.abstract3 = The effects on rationality affect everything from testing to estimation, from programming to project delivery. It is easier to see and react to these effects in yourself and others when you know what some of them are.
+
+main.event.note =  We've got Kevlin to target this talk IT managers, IT managers and developers who seek to understand the many facets of cooperation difficult arts. The speech is very entertaining and can advantageously be attended by anyone who seeks to understand human's inner behavior patterns.
+
+main.event.motivation.title = the motivation
+main.event.motivation1 = We see social skills becoming more and more important.
+main.event.motivation2 = We want to engage in social interactions and influence them positively.
+main.event.motivation3 = We have a desire to constantly improve our skills and business.
+
+main.event.where.title = Where and how
+main.event.where1 = The event takes place in Copenhagen on Nov. 10, 2011 from 14.30 to 18.30
+main.event.where2 = There will be snacks served during and ending with the opportunity to taste a beer around. at 18.00
+main.event.where3 = and, it is FREE
+
+application.title = CybercomTech presents talk by Kevlin Henney
+application.submit = Do you want to register for this event? It's free
+application.legend = Cybercom is proud to present ..
+application.footer = This Play Java Web Application is designed as part of a software presentation. <br> The application is designed to execute from a Heroku cloud platform (Paas). <br>The use storie is that an admin can create an event and let a audiences register for the event. <br> Web Application is by no means finished or done done done.
+application.githup = - <a href="https://github.com/frankvilhelmsen/cybertech">Souce code at github</a>
+
+application.add.title = CybercomTech - Add Participant
+application.add.legend = We need some basic information for you to register
+application.add.submit = Register for event
+
+app = in a easier provocative style
+
+application.show.title = CybercomTech - Show Participant
+application.show.legend.not.found = I did not find any participants
+application.show.legend = Thank you for your registration
+application.show.exit = Confirm your registration
+application.show.copy.link = Copy link for this page
+
+application.thank.you = You are registered as participants for this event.
+
+secure.title=Cybertime Admin Console
+secure.username=Brugernavn:
+secure.password=Password:
+secure.remember=Husk mig
+secure.signin=Log ind
+secure.error=Oops, ukendt brugernavn eller password.
+secure.logout=Du er logged ud
+

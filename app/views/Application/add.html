@@ -1,0 +1,50 @@
+#{extends 'main.html' /}
+
+#{set title: messages.get('application.add.title') /}
+#{set legend: messages.get('application.add.legend') /}
+
+#{form @Application.create()}
+
+    <p>
+        #{field 'fullname'}
+        <label>Fullname:</label>
+        <input type="text" name="${field.name}" value="${participant?.fullname}" class="${field.errorClass}" />
+        <span class="error">${field.error} #{error 'participant.fullname' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'address'}
+        <label>Address:</label>
+        <input type="text" name="${field.name}" value="${participant?.address}" class="${field.errorClass}" />
+        <span class="error">${field.error} #{error 'participant.address' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'company'}
+        <label>Company:</label>
+        <input type="text" name="${field.name}" value="${participant?.company}" class="${field.errorClass}" />
+        <span class="error">${field.error} #{error 'participant.company' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'phone'}
+        <label>Phone:</label>
+        <input type="text" name="${field.name}" value="${participant?.phone}" class="${field.errorClass}" />
+        <span class="error">${field.error} #{error 'participant.phone' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'email'}
+        <label>Email:</label>
+        <input type="text" id="${field.id}" name="${field.name}" value="${participant?.email}" class="${errorClass}" />
+        <span class="error">${field.error} #{error 'participant.email' /}</span>
+        #{/field}
+    </p>
+
+    <p>
+        <input type="submit" value="&{'application.add.submit'}" />
+    </p>
+
+#{/form}
+
+

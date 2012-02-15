@@ -1,0 +1,83 @@
+#{extends 'main.html' /}
+#{set title:'CybercomTech - Edit Participant' /}
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $("input[type='checkbox']").bind('click', function() {
+	var action = #{jsAction @attend(':id') /}
+    $.post(action({ id: ${participant.id} }),
+      function(data) {
+    });
+  });
+});
+</script>
+
+#{ if participant }
+
+#{/if}
+
+#{form @delete(participant.id)}
+
+<fieldset>
+         <legend>.. thank you ${participant?.fullname} for participating in this event</legend>
+
+    <p>
+        #{field 'fullname'}
+        <label>Fullname:</label>
+        <input type="text" name="${field.name}" value="${participant?.fullname}" class="${field.errorClass}" />
+        <span class="error">${field.error} #{error 'participant.fullname' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'address'}
+        <label>Address:</label>
+        <input type="text" name="${field.name}" value="${participant?.address}" class="${field.errorClass}" />
+        <span class="error">${field.error} #{error 'participant.address' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'company'}
+        <label>Company:</label>
+        <input type="text" name="${field.name}" value="${participant?.company}" class="${field.errorClass}" />
+        <span class="error">${field.error} #{error 'participant.company' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'phone'}
+        <label>Phone:</label>
+        <input type="text" name="${field.name}" value="${participant?.phone}" class="${field.errorClass}" />
+        <span class="error">${field.error} #{error 'participant.phone' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'email'}
+        <label>Email:</label>
+        <input type="text" id="${field.id}" name="${field.name}" value="${participant?.email}" class="${errorClass}" />
+        <span class="error">${field.error} #{error 'participant.email' /}</span>
+        #{/field}
+    </p>
+    <p>
+        #{field 'isAttending'}
+        <label>Attending:</label>
+        #{if participant?.isAttending }
+		<input type="checkbox" checked id="${participant?.id}" name="${field.name}" value="${participant?.isAttending}" class="${errorClass}" />
+		#{/if}
+        #{elseif ! participant?.isAttending  }
+		<input type="checkbox" id="${participant?.id}" name="${field.name}" value="${participant?.isAttending}" class="${errorClass}" />
+        #{/elseif}
+        <span class="error">${field.error} #{error 'participant.isAttending' /} </span>
+        #{/field}
+    </p>
+
+
+    <p>
+        <input type="submit" value="&{'crud.delete', participant.fullname}" />
+    </p>
+
+
+
+#{/form}
+ </fieldset>
+
+#{set footer:'CybercomTech - Edit Participant' /}

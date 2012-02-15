@@ -1,0 +1,14 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+# application.langs=en,da
+
+main.event.title = Kognitive fordomme og effekter du bør vide noget om
+
+secure.title=Cybertime Admin Console
+secure.username=Brugernavn:
+secure.password=Password:
+secure.remember=Husk mig
+secure.signin=Log ind
+secure.error=Oops, ukendt brugernavn eller password.
+secure.logout=Du er logged ud

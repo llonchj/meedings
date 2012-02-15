@@ -1,0 +1,39 @@
+
+header, footer, section, aside, nav, article {
+  display: block;
+}
+
+body {
+  margin:12px;
+  margin:12px;
+}
+
+body {
+  font-size:70%;
+  background-color:#FFF;
+  color:black;
+  font-family:"Verdana", "Georgia", "Sans-serif";
+  text-decoration: none;
+}
+
+a {
+  text-decoration:none;
+  color:black;
+}
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid silver;
+  font-size:90%;
+  text-align:left;
+}
+
+h1 { font-size:140%;}
+h2 { font-size:120%;}
+
+.error { color:red;}
+.success { color:green;}
+
+footer {
+  text-align:center;
+ }

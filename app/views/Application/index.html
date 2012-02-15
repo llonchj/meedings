@@ -1,0 +1,38 @@
+#{extends 'main.html' /}
+
+#{set legend: messages.get('application.legend') /}
+
+<article>
+    <h2>&{'main.event.title'}</h2>
+    <small>&{'main.event.author'}</small>
+    <p>&{'main.event.abstract1'}</p>
+    <p>&{'main.event.abstract2'}</p>
+    <p>&{'main.event.abstract3'}</p>
+</article>
+
+<article>
+    <h2>&{'main.event.motivation.title'}</h2>
+    <ul>
+      <li>&{'main.event.motivation1'}</li>
+      <li>&{'main.event.motivation2'}</li>
+      <li>&{'main.event.motivation3'}</li>
+   </ul>
+    <p>&{'main.event.note'}</p>
+</article>
+
+<article>
+   <h2>&{'main.event.where.title'}</h2>
+    <ul>
+        <li>&{'main.event.where1'}</li>
+        <li>&{'main.event.where2'}</li>
+        <li>&{'main.event.where3'}</li>
+   </ul>
+</article>
+
+#{form @Application.add()}
+    <p>
+        <input type="submit" value="&{'application.submit'}" />
+    </p>
+#{/form}
+
+

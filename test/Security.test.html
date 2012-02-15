@@ -1,0 +1,15 @@
+#{selenium 'Test security'}
+ 
+    // Try to log in the administration area
+    clearSession()
+    open('/admin')
+    waitForPageToLoad(1000)
+    assertTextPresent('Cybertime Admin Console')
+    type('username', 'franke')
+    type('password', 'whatever')
+	clickAndWait('css=input[type=submit]')
+
+    // Verify that the user in correctly logged in
+    assertTextPresent('Administration')
+ 
+#{/selenium}

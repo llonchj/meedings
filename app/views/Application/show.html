@@ -1,0 +1,65 @@
+#{extends 'main.html' /}
+
+#{ if ! participant }
+  #{set legend: messages.get('application.show.legend.not.found') /}
+  <p>
+    <input type="submit" value="" />
+    </p>
+#{/if}
+
+
+#{ if participant }
+
+  #{set legend: messages.get('application.show.legend') /}
+
+  #{form @confirm(participant.id)}
+    <p>
+        #{field 'fullname'}
+        <label>Fullname:</label> <label> ${participant?.fullname}</label>
+        #{/field}
+    </p>
+    <p>
+        #{field 'address'}
+        <label>Address:</label><label> ${participant?.address}</label>
+        #{/field}
+    </p>
+    <p>
+        #{field 'company'}
+        <label>Company:</label><label> ${participant?.company} </label>
+        #{/field}
+    </p>
+    <p>
+        #{field 'phone'}
+        <label>Phone:</label><label> ${participant?.phone} </label>
+        #{/field}
+    </p>
+    <p>
+        #{field 'email'}
+        <label>Email:</label><label> ${participant?.email} </label>
+        #{/field}
+    </p>
+    <p>
+        #{field 'isAttending'}
+        <label>Attending:</label>
+        #{if participant?.isAttending }
+		<input type="checkbox" checked id="${participant?.id}" name="${field.name}" value="${participant?.isAttending}" class="${errorClass}" />
+		#{/if}
+        #{elseif ! participant?.isAttending  }
+		<input type="checkbox" id="${participant?.id}" name="${field.name}" value="${participant?.isAttending}" class="${errorClass}" />
+        #{/elseif}
+        <span class="error">${field.error} #{error 'participant.isAttending' /} </span>
+        #{/field}
+    </p>
+
+    <p>
+        <a href="/participants/${participant?.sha1}">&{'application.show.copy.link'}</a>
+    </p>
+
+
+    <p>
+        <input type="submit" value="&{'application.show.exit'}" />
+    </p>
+
+  #{/form}
+#{/if}
+
